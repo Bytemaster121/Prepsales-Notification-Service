@@ -7,7 +7,7 @@ A robust Flask-based Notification Service that sends email, SMS, and in-app noti
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-yellow)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3.8%2B-orange)
 ![Twilio](https://img.shields.io/badge/Twilio-SMS-red)
-![License](https://img.shields.io/badge/License-MIT-blue)
+
 
 ## Table of Contents
 - [Features](#features)
