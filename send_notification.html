@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Notification</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        form { margin-top: 20px; }
+        label { display: inline-block; width: 100px; margin-bottom: 10px; }
+        input, select, textarea { width: 300px; padding: 5px; margin-bottom: 10px; }
+        textarea { height: 100px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        p.message { color: #d32f2f; }
+        p.message.success { color: #2e7d32; }
+    </style>
+</head>
+<body>
+    <h1>Send Notification</h1>
+    <form method="POST">
+        <label>User ID:</label>
+        <input type="text" name="user_id" required><br>
+        <label>Type:</label>
+        <select name="type" required>
+            <option value="email">Email</option>
+            <option value="sms">SMS</option>
+            <option value="in_app">In-App</option>
+        </select><br>
+        <label>Message:</label>
+        <textarea name="message" required></textarea><br>
+        <label>Email:</label>
+        <input type="email" name="email"><br>
+        <label>Phone:</label>
+        <input type="text" name="phone" placeholder="+1234567890"><br>
+        <button type="submit">Send</button>
+    </form>
+    {% if message %}
+        <p class="message {{ 'success' if 'sent to user' in message else '' }}">{{ message }}</p>
+    {% endif %}
+</body>
+</html>
